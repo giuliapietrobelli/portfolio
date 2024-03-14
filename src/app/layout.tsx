@@ -1,8 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
+import Link from 'next/link'
+import Header from './header'
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({subsets: ["latin"], weight: ['200','300', '400', '500', '700']})
+// const ciao = 'items-center'
+// const bodyClassName = inter.className + ' flex justify-between' + ' ' + ciao;
+// const bodyClassName2 = `${inter.className} flex justify-between ${ciao}`
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -13,10 +18,36 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) {
+}) { 
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${poppins.className} m-0`}>
+
+        <Header />
+
+        <div className='pt-24 md:pt-32'>
+          {children}
+        </div>
+
+        <div id="footer" className="flex flex-col justify-center bg-zinc-800 min-h-96 gap-4 mt-[10%] md:mt-[6%]">
+          <ul id="footer-nav" className="flex text-center justify-center gap-4">
+            <li>
+            <Link href="/work" className="text-zinc-300 text-lg font-medium">Work</Link>
+            </li>
+
+            <li>
+            <Link href="/about" className="text-zinc-300 text-lg font-medium">About</Link>
+            </li>
+
+            <li>
+              <Link href="/contact" className="text-zinc-300 text-lg font-medium">Contact</Link>
+            </li>
+          </ul>
+          <p className="text-white text-center text-sm font-light">Made with ♥ in Italy</p>
+        </div>
+
+      </body>
     </html>
   )
 }

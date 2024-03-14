@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '2xl': ['1.54rem', '1.4'],
+        '3xl': ['2.074rem', '1.2'],
+        '5xl': ['3rem', '1.2'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
