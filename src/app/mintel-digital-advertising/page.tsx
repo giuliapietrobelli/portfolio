@@ -27,7 +27,7 @@ export default function MintelAdv() {
         <div id="icon-container" className="flex w-[95%] justify-end fixed top-[5%]">
           <div id="close-lightbox close-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
-              <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+              <path fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"
                 d="M2 30L30 2m0 28L2 2" />
             </svg>
           </div>
@@ -45,7 +45,7 @@ export default function MintelAdv() {
       <div id="item-pagination" className="flex justify-end xl:px-20">
         <Link href="/" id="item-pagination-link item-pagination-link--next" className="flex items-center md:gap-4 mr-auto">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-            <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            <path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
             d="M20 30L8 16L20 2" />
           </svg>
           <div id="pagination-title-wrapper">
@@ -58,7 +58,7 @@ export default function MintelAdv() {
             <h3 id="item-pagination-title" className="text-zinc-900 font-medium text-xl md:text-3xl">Next project</h3>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-            <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            <path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
               d="m12 30l12-14L12 2" />
           </svg>
         </Link>

@@ -32,7 +32,7 @@ export default function LauraAshleyFeature() {
       <div id="item-pagination" className="flex justify-end xl:px-20">
         <Link href="/" id="item-pagination-link item-pagination-link--next" className="flex items-center md:gap-4 mr-auto">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-            <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            <path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
             d="M20 30L8 16L20 2" />
           </svg>
           <div id="pagination-title-wrapper">
@@ -45,7 +45,7 @@ export default function LauraAshleyFeature() {
             <h3 id="item-pagination-title" className="text-zinc-900 font-medium text-xl md:text-3xl">Next project</h3>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-            <path fill="none" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            <path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
               d="m12 30l12-14L12 2" />
           </svg>
         </Link>
