@@ -1,11 +1,39 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import LightboxGallery from '../lightbox-gallery'
+import fmb1 from "./fmb_userflow.png"
+import fmb2 from "./fmb_mockup_mobile.png"
+import fmb3 from "./fmb_illo.png"
+import fmb4 from "./fmb_ui_elements.png"
+
+const images = [
+  {
+    title: "Userflow",
+    src: fmb1,
+    alt: "Userflow"
+  },
+  {
+    title: "Mockup",
+    src: fmb2,
+    alt: "Mockup"
+  },
+  {
+    title: "Illustrations",
+    src: fmb3,
+    alt: "Illustrations newsletter"
+  },
+  {
+    title: "Ui elements",
+    src: fmb4,
+    alt: "Ui elements"
+  },
+]
 
 export default function FindMyBike() {
   return (
-    <div id="page-container" className="flex flex-col gap-10 md:gap-20 py-14 px-10">
+    <div className="flex flex-col gap-10 md:gap-20 py-14 px-10">
 
-      <div id="text-description" className="text-left md:text-center md:max-w-[60%] self-center">
+      <div className="text-left md:text-center md:max-w-[60%] self-center">
         <h2 className="font-medium text-5xl">Find my bike app</h2>
         <p className="font-light text-2xl my-6">Findmybike is a personal project that is on a plan to be developed. It’s a mobile app that allows people to
         compare multiple types of bikes, in order to easily find the right one. I created all the visual parts including
@@ -13,8 +41,8 @@ export default function FindMyBike() {
         </p>
       </div>
 
-      <div id="preview" className="self-center md:max-w-[70%]">
-        <Image id="preview-pic" className="self-center" src="/fmb_hero.jpeg" alt="Find my bike cover" width={1400} height={840} priority/>
+      <div className="self-center md:max-w-[70%]">
+        <Image className="self-center" src="/fmb_hero.jpeg" alt="Find my bike cover" width={1400} height={840} priority/>
       </div>
 
     {/* <div id="text-description" className="text-left md:text-center md:max-w-[60%] self-center">
@@ -25,49 +53,24 @@ export default function FindMyBike() {
       </p>
     </div> */}
 
-      <div id="lightbox" className="fixed top-0 left-0 w-screen bg-zinc-900/50 hidden flex-col items-center gap-2 overflow-scroll">
-        <div id="icon-container" className="flex w-[95%] justify-end fixed top-[5%]">
-          <div id="close-lightbox close-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
-              <path fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"
-                d="M2 30L30 2m0 28L2 2" />
-            </svg>
-          </div>
-        </div>
-        <div id="lightbox-container" className="max-w-[70%] w-screen bg-white">
-           {/* <h3>lightbox</h3>  */}
-        </div>
+      <div className="grid items-center gap-3 md:grid-cols-2 md:gap-8 md:px-[8%]">
+        <LightboxGallery images={images} />
       </div>
 
-      <div id="fmb-grid" className="grid items-center gap-3 md:grid-cols-2 md:gap-8 md:px-[8%]">
-        <div id="fmb-grid-one">
-          <Image id="fmb-1" className="max-w-full" src="/fmb_userflow.png" alt="userflow" width={1021} height={799} priority/>
-        </div>
-        <div id="fmb-grid-two">
-          <Image id="fmb-2" className="max-w-full" src="/fmb_mockup_mobile.png" alt="mobile mockup" width={1021} height={799} priority/>
-        </div>
-        <div id="fmb-grid-three">
-          <Image id="fmb-3" className="max-w-full" src="/fmb_illo.png" alt="app illustration" width={1021} height={799} priority/>
-          </div>
-        <div id="fmb-grid-four">
-          <Image id="fmb-4" className="max-w-full" src="/fmb_ui_elements.png" alt="ui elements" width={1021} height={799} priority/>
-        </div>
-      </div>
-
-      <div id="item-pagination" className="flex justify-end xl:px-20">
-        <Link href="/" id="item-pagination-link item-pagination-link--next" className="flex items-center md:gap-4 mr-auto">
+      <div className="flex justify-end xl:px-20">
+        <Link href="./laura-ashley-newsletters" className="flex items-center md:gap-4 mr-auto">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
             d="M20 30L8 16L20 2" />
           </svg>
-          <div id="pagination-title-wrapper">
+          <div>
             <h3 id="item-pagination-title" className="text-zinc-900 font-medium text-xl md:text-3xl">Previous project</h3>
           </div>
         </Link>
 
-        <Link href="/" id="item-pagination-link item-pagination-link--next" className="flex items-center md:gap-4">
-          <div id="pagination-title-wrapper">
-            <h3 id="item-pagination-title" className="text-zinc-900 font-medium text-xl md:text-3xl">Next project</h3>
+        <Link href="./diesel-tribute-catalogue" className="flex items-center md:gap-4">
+          <div>
+            <h3 className="text-zinc-900 font-medium text-xl md:text-3xl">Next project</h3>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"

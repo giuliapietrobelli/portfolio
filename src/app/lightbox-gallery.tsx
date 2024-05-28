@@ -13,19 +13,18 @@ import {
 import {
   Dialog,
   DialogContent,
-  // DialogDescription,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { cn } from "@/lib/utils"
 
 type Image = {
   src: StaticImageData,
   title: string,
   alt: string,
+  className?: string;
 }
 
-export default function LightboxGallery(props: { images: Image[] }) {
+export default function LightboxGallery(props: { images: Image[], colWidth?: number, contentClassName?: string }) {
   const [currentIndex, setIndex] = React.useState<number | undefined>(undefined);
 
   const handleOpenChange = (open: boolean) => {
@@ -34,22 +33,42 @@ export default function LightboxGallery(props: { images: Image[] }) {
     }
   }
 
+  const [api, setApi] = React.useState<CarouselApi>()
+ 
+  React.useEffect(() => {
+    if (!api) {
+      return
+    }
+ 
+    api.on("select", ({  selectedScrollSnap }) => {
+      // reset slide scroll position after slide change
+      api.slideNodes()[selectedScrollSnap()].scrollTo(0, 0);
+    })
+  }, [api])
+
   return (
     <Dialog onOpenChange={handleOpenChange}>
       {props.images.map((image, index) => (
-        <DialogTrigger onClick={() => setIndex(index)} key={image.title}>
-          <Image className="max-w-full shadow-2xl shadow-zinc-400" src={image.src} alt={image.alt} width={400} quality={10} priority/>
-        </DialogTrigger>
+         <div className={image.className} key={image.title}>
+          <DialogTrigger onClick={() => setIndex(index)}>
+            <Image className="max-w-full object-contain hover:opacity-75 hover:transition-opacity duration-500" src={image.src} alt={image.alt} width={props.colWidth} quality={10} priority/>
+          </DialogTrigger>
+        </div>
       ))}
       
-      <DialogContent>
-        <Carousel opts={{ startIndex: currentIndex }}>
-          <CarouselContent>
-          {props.images.map((image) => (
-            <CarouselItem key={image.title}>
-              <Image src={image.src} alt={image.alt} priority/>
-            </CarouselItem>
-          ))}
+      <DialogContent
+        className={cn(
+          "block top-[10%] h-5/6",
+          props.contentClassName
+        )}
+      >
+        <Carousel setApi={setApi} opts={{ startIndex: currentIndex }} className="h-full [&>*:first-child]:h-full">
+          <CarouselContent className="h-full">
+            {props.images.map((image) => (
+              <CarouselItem key={image.title} className="overflow-y-auto">
+                <Image src={image.src} alt={image.alt} priority/>
+              </CarouselItem>
+            ))}
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />

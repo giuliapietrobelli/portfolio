@@ -1,7 +1,44 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
+import LightboxGallery from '../lightbox-gallery'
 import mintelHome from "./mintel_home.png"
+import mintelListing from "./mintel_listing.png"
+import mintelProduct from "./mintel_product.png"
+import mintelCart from "./mintel_cart.png"
+import mintelCheckout from "./mintel_checkout.png"
+
+const images = [
+  {
+    title: "Homepage",
+    src: mintelHome,
+    alt: "Mintel homepage",
+    className: "shadow-2xl shadow-zinc-400 row-[1/3]",
+  },
+  {
+    title: "Listing page",
+    src: mintelListing,
+    alt: "Mintel listing page",
+    className: "shadow-2xl shadow-zinc-400 row-[1/3]",
+  },
+  {
+    title: "Product page",
+    src: mintelProduct,
+    alt: "Mintel product page",
+    className: "shadow-2xl shadow-zinc-400 row-[1/3]",
+  },
+  {
+    title: "Cart page",
+    src: mintelCart,
+    alt: "Mintel cart page",
+    className: "shadow-2xl shadow-zinc-400 row-[1/2]",
+  },
+  {
+    title: "Checkout page",
+    src: mintelCheckout,
+    alt: "Mintel checkout page",
+    className: "shadow-2xl shadow-zinc-400 col-[4] row-[2]",
+  }
+]
 
 export default function Mintel() {
   return (
@@ -28,11 +65,11 @@ export default function Mintel() {
     </div>
 
     <div id="mintel-grid" className="grid items-center grid-cols-2 md:grid-cols-4 gap-2 md:gap-8 md:p-[4%]">
-      <div id="mintel-grid-one" className="row-[1/3]">
+      <LightboxGallery images={images} />
+      {/* <div id="mintel-grid-one" className="row-[1/3]">
         <Image 
-          id="mintel-home" 
           className="shadow-2xl shadow-zinc-400" 
-          src={mintelHome} 
+          src={mintelHome}
           alt="Mintel homepage" 
           priority
           quality={30}
@@ -40,21 +77,46 @@ export default function Mintel() {
         />
       </div>
       <div id="mintel-grid-two" className="row-[1/3]">
-        <Image id="mintel-listing" className="max-w-full shadow-2xl shadow-zinc-400" src="/mintel_listing.png" alt="Mintel listing page" width={1021} height={799} priority/>
+        <Image
+          className="max-w-full shadow-2xl shadow-zinc-400"
+          src={mintelListing}
+          alt="Mintel listing page"
+          width={1021}
+          height={799}
+          priority/>
       </div>
-      <div id="mintel-grid-three" className="row-[1/3]">
-        <Image id="mintel-product" className="max-w-full shadow-2xl shadow-zinc-400" src="/mintel_product.png" alt="Mintel product page" width={1021} height={799} priority/>
+      <div id="mintel-grid-three"
+      className="row-[1/3]">
+        <Image
+          className="max-w-full shadow-2xl shadow-zinc-400"
+          src={mintelProduct}
+          alt="Mintel product page"
+          width={1021}
+          height={799}
+          priority/>
       </div>
       <div id="mintel-grid-four" className="row-[1/2]">
-        <Image id="mintel-cart" className="max-w-full shadow-2xl shadow-zinc-400" src="/mintel_cart.png" alt="Mintel cart page" width={1021} height={799} priority/>
+        <Image
+          className="max-w-full shadow-2xl shadow-zinc-400"
+          src={mintelCart}
+          alt="Mintel cart page"
+          width={1021}
+          height={799}
+          priority/>
       </div>
       <div id="mintel-grid-five" className="col-[4] row-[2]">
-        <Image id="mintel-checkout" className="max-w-full shadow-2xl shadow-zinc-400" src="/mintel_checkout.png" alt="Mintel checkout page" width={1021} height={799} priority/>
-      </div>        
+        <Image
+          className="max-w-full shadow-2xl shadow-zinc-400"
+          src={mintelCheckout}
+          alt="Mintel checkout page"
+          width={1021}
+          height={799}
+          priority/>
+      </div>         */}
     </div>
 
       <div id="mintel-pagination" className="flex justify-end xl:px-20">
-        <Link href="/" id="item-pagination-link item-pagination-link--next" className="flex items-center md:gap-4">
+        <Link href="./comperemedia-website" id="item-pagination-link item-pagination-link--next" className="flex items-center md:gap-4">
           <div id="pagination-title-wrapper">
             <h3 id="item-pagination-title" className="text-zinc-900 font-medium text-xl md:text-3xl">Next project</h3>
           </div>
