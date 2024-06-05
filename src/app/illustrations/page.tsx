@@ -100,7 +100,7 @@ export default function Illustrations() {
       </div>
 
       <div className="grid items-center grid-cols-2 md:grid-cols-3 gap-9 md:gap-12 px-[6%]">
-        <LightboxGallery images={images} contentClassName="h-auto"/>
+        <LightboxGallery images={images} />
       </div>
 
       <div className="flex justify-end xl:px-20">

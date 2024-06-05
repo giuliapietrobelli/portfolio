@@ -24,7 +24,7 @@ type Image = {
   className?: string;
 }
 
-export default function LightboxGallery(props: { images: Image[], colWidth?: number, contentClassName?: string }) {
+export default function LightboxGallery(props: { images: Image[], colWidth?: number, className?: string }) {
   const [currentIndex, setIndex] = React.useState<number | undefined>(undefined);
 
   const handleOpenChange = (open: boolean) => {
@@ -49,23 +49,17 @@ export default function LightboxGallery(props: { images: Image[], colWidth?: num
   return (
     <Dialog onOpenChange={handleOpenChange}>
       {props.images.map((image, index) => (
-         <div className={image.className} key={image.title}>
+         <div className={image.className} key={index}>
           <DialogTrigger onClick={() => setIndex(index)}>
             <Image className="max-w-full object-contain hover:opacity-75 hover:transition-opacity duration-500" src={image.src} alt={image.alt} width={props.colWidth} quality={10} priority/>
           </DialogTrigger>
         </div>
       ))}
-      
-      <DialogContent
-        className={cn(
-          "block top-[10%] h-5/6",
-          props.contentClassName
-        )}
-      >
+      <DialogContent className={cn('block max-w-4xl', props.className)}>
         <Carousel setApi={setApi} opts={{ startIndex: currentIndex }} className="h-full [&>*:first-child]:h-full">
           <CarouselContent className="h-full">
-            {props.images.map((image) => (
-              <CarouselItem key={image.title} className="overflow-y-auto">
+            {props.images.map((image, index) => (
+              <CarouselItem key={index} className="overflow-y-auto flex items-start justify-center">
                 <Image src={image.src} alt={image.alt} priority/>
               </CarouselItem>
             ))}

@@ -1,31 +1,49 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import LightboxGallery from '../lightbox-gallery'
-import newsletter1 from "./la-lighting-email.png"
-import newsletter2 from "./la-autumn-walks-email.png"
-import newsletter3 from "./la-xmas-email.png"
-import newsletter4 from "./la-hebrides-email.png"
+import newsletter1 from "./la-xmas-gifts-email.jpg"
+import newsletter2 from "./la-autumn-walks-email.jpg"
+import newsletter3 from "./la-hebrides-email.jpg"
+import newsletter4 from "./la-lighting-email.jpg"
+import newsletter5 from "./la-xmas-gifs.gif"
+import newsletter6 from "./la-wool-email.jpg"
 
 const images = [
   {
-    title: "Lighting Looks newsletter",
+    title: "Christmas Gifts Guide",
     src: newsletter1,
-    alt: "Lighting Looks newsletter"
+    alt: "Christmas Gifts Guide newsletter",
+    className: "shadow-2xl shadow-zinc-400",
   },
   {
     title: "Autumn Walks Collection newsletter",
     src: newsletter2,
-    alt: "Autumn Walks Collection newsletter"
-  },
-  {
-    title: "Christmas Gifts Guide",
-    src: newsletter3,
-    alt: "Christmas Gifts Guide newsletter"
+    alt: "Autumn Walks Collection newsletter",
+    className: "shadow-2xl shadow-zinc-400",
   },
   {
     title: "Hebrides Collection newsletter",
+    src: newsletter3,
+    alt: "Hebrides Collection newsletter",
+    className: "shadow-2xl shadow-zinc-400",
+  },
+  {
+    title: "Lighting Looks newsletter",
     src: newsletter4,
-    alt: "Hebrides Collection newsletter"
+    alt: "Lighting Looks newsletter",
+    className: "shadow-2xl shadow-zinc-400",
+  },
+  // {
+  //   title: "Xmas Gifts",
+  //   src: newsletter5,
+  //   alt: "Xmas Gifts newsletter",
+  //   className: "shadow-2xl shadow-zinc-400 row-[1/2]",
+  // },
+  {
+    title: "Wool newsletter",
+    src: newsletter6,
+    alt: "Wool newsletter",
+    className: "shadow-2xl shadow-zinc-400 col-[4] row-[1]",
   },
 ]
 
@@ -50,12 +68,11 @@ export default function LauraAshleyNewsletters() {
       </p>
     </div>
 
+    <div className="grid items-center grid-cols-2 md:grid-cols-5 gap-2 md:gap-8 md:p-[4%]">
+      <LightboxGallery images={images} className='h-5/6' />
+    </div>
 
-      <div className="grid items-center grid-cols-4 gap-2 md:gap-8 lg:px-[10%]">
-      <LightboxGallery images={images} />
-      </div>
-
-      <div className="flex justify-end xl:px-20">
+    <div className="flex justify-end xl:px-20">
         <Link href="./laura-ashley-feature-page" className="flex items-center md:gap-4 mr-auto">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
@@ -75,7 +92,7 @@ export default function LauraAshleyNewsletters() {
               d="m12 30l12-14L12 2" />
           </svg>
         </Link>
-      </div>
+    </div>
 
     </div>
   )

@@ -72,7 +72,7 @@ export default function Comperemedia() {
     </div> */}
 
       <div className="grid items-center grid-cols-6 gap-3 md:gap-8 md:p-[4%]">
-        <LightboxGallery images={images} />
+        <LightboxGallery images={images} className='h-5/6'/>
       </div>
 
       <div className="flex justify-end xl:px-20">

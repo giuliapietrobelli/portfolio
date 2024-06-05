@@ -65,7 +65,7 @@ export default function Mintel() {
     </div>
 
     <div id="mintel-grid" className="grid items-center grid-cols-2 md:grid-cols-4 gap-2 md:gap-8 md:p-[4%]">
-      <LightboxGallery images={images} />
+      <LightboxGallery images={images} className='h-5/6'/>
       {/* <div id="mintel-grid-one" className="row-[1/3]">
         <Image 
           className="shadow-2xl shadow-zinc-400" 
