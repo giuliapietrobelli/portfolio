@@ -24,7 +24,7 @@ type Image = {
   className?: string;
 }
 
-export default function LightboxGallery(props: { images: Image[], colWidth?: number, className?: string }) {
+export default function LightboxGallery(props: { images: Image[], className?: string }) {
   const [currentIndex, setIndex] = React.useState<number | undefined>(undefined);
 
   const handleOpenChange = (open: boolean) => {
@@ -49,9 +49,13 @@ export default function LightboxGallery(props: { images: Image[], colWidth?: num
   return (
     <Dialog onOpenChange={handleOpenChange}>
       {props.images.map((image, index) => (
-         <div className={image.className} key={index}>
+        <div 
+          className={cn('leading-[0]', image.className)}
+          key={index}
+        >
           <DialogTrigger onClick={() => setIndex(index)}>
-            <Image className="max-w-full object-contain hover:opacity-75 hover:transition-opacity duration-500" src={image.src} alt={image.alt} width={props.colWidth} quality={10} priority/>
+            <Image className="max-w-full hover:opacity-75 hover:transition-opacity duration-500" src={image.src} alt={image.alt} quality={10} priority/>
+
           </DialogTrigger>
         </div>
       ))}
