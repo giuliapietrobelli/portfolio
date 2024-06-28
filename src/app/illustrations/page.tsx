@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import Link from 'next/link'
+
+import ProjectIntro from '../project-intro'
 import LightboxGallery from '../lightbox-gallery'
 import illo1 from "./illustration1.png"
 import illo2 from "./illustration2.png"
@@ -13,6 +13,7 @@ import illo9 from "./illustration9.png"
 import illo10 from "./illustration10.png"
 import illo11 from "./illustration11.png"
 import illo12 from "./illustration12.png"
+import PaginationLinks from '../pagination-links'
 
 const images = [
   {
@@ -91,40 +92,25 @@ const images = [
 
 export default function Illustrations() {
   return (
-    <div className="flex flex-col gap-10 md:gap-20 py-14 px-80">
+    <>
+    
+    <div className="container flex flex-col gap-10 md:gap-20 py-20">
 
-      <div className="text-left md:text-center md:max-w-[60%] self-center">
-        <h2 className="font-medium text-5xl">Illustrations</h2>
-        <p className="font-light text-2xl my-6">A selection of illustrations made with Procreate, Illustrator, and Photoshop
-        </p>
-      </div>
+      <ProjectIntro title="Illustrations">
+        A selection of illustrations made with Procreate, Illustrator, and Photoshop
+      </ProjectIntro>
 
       <div className="grid items-center grid-cols-2 md:grid-cols-3 gap-9 md:gap-12 px-[6%]">
         <LightboxGallery images={images} />
       </div>
-
-      <div className="flex justify-end xl:px-20">
-        <Link href="./mintel-digital-advertising" className="flex items-center md:gap-4 mr-auto">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-              <path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-              d="M20 30L8 16L20 2" />
-            </svg>
-            <div>
-              <h3 className="text-zinc-900 font-medium text-xl md:text-3xl">Previous project</h3>
-            </div>
-        </Link>
-
-        <Link href="./laura-ashley-feature-page" className="flex items-center md:gap-4">
-            <div>
-              <h3 className="text-zinc-900 font-medium text-xl md:text-3xl">Next project</h3>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-              <path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                d="m12 30l12-14L12 2" />
-            </svg>
-        </Link>
-      </div>
-
     </div>
+
+      <PaginationLinks
+        prev="Mintel Digital Advertising"
+        prevLink="./mintel-digital-advertising"
+        next="Laura Ashley feature page"
+        nextLink="./laura-ashley-feature-page"
+      />
+    </>
   )
 }

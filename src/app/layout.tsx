@@ -30,7 +30,7 @@ export default function RootLayout({
           {children}
         </div>
 
-        <div id="footer" className="flex flex-col justify-center bg-zinc-800 min-h-96 gap-4 mt-[10%] md:mt-[6%]">
+        <div id="footer" className="flex flex-col justify-center bg-zinc-800 min-h-96">
           <ul id="footer-nav" className="flex text-center justify-center gap-4">
             <li>
             <Link href="/work" className="text-zinc-300 text-lg font-medium">Work</Link>
