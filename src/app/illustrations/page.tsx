@@ -100,7 +100,7 @@ export default function Illustrations() {
         A selection of illustrations made with Procreate, Illustrator, and Photoshop
       </ProjectIntro>
 
-      <div className="grid items-center grid-cols-2 md:grid-cols-3 gap-9 md:gap-12 px-[6%]">
+      <div className="grid items-center grid-cols-2 md:grid-cols-3 gap-9 md:gap-12">
         <LightboxGallery images={images} />
       </div>
     </div>

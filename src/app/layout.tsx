@@ -30,18 +30,18 @@ export default function RootLayout({
           {children}
         </div>
 
-        <div id="footer" className="flex flex-col justify-center bg-zinc-800 min-h-96">
-          <ul id="footer-nav" className="flex text-center justify-center gap-4">
+        <div className="flex flex-col gap-4 justify-center bg-zinc-800 min-h-96">
+          <ul className="flex text-center justify-center gap-4">
             <li>
-            <Link href="/work" className="text-zinc-300 text-lg font-medium">Work</Link>
+            <Link href="/work" className="text-zinc-300 text-xl font-medium hover:opacity-75 hover:transition-opacity">Work</Link>
             </li>
 
             <li>
-            <Link href="/about" className="text-zinc-300 text-lg font-medium">About</Link>
+            <Link href="/about" className="text-zinc-300 text-xl font-medium hover:opacity-75 hover:transition-opacity">About</Link>
             </li>
 
             <li>
-              <Link href="/contact" className="text-zinc-300 text-lg font-medium">Contact</Link>
+              <Link href="/contact" className="text-zinc-300 text-xl font-medium hover:opacity-75 hover:transition-opacity">Contact</Link>
             </li>
           </ul>
           <p className="text-white text-center text-sm font-light">Made with ♥ in Italy</p>

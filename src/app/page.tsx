@@ -7,15 +7,15 @@ export default function Home() {
   const portfolioOverlay = 'flex items-center justify-center absolute bg-white opacity-0 w-full h-full hover:opacity-75 hover:transition-opacity'
 
   return (
-    <main className="flex flex-col items-center justify-between px-1">
+    <main className="flex flex-col items-center justify-between pb-11">
 
-      <div id="hero" className="flex flex-col flex-wrap min-h-52 slide">
-        <h1 id="intro" className="w-9/12 sm:w-8/12 md:w-8/12 xl:w-8/12 m-auto text-center sm:py-20 lg:py-24 px-8 text-2xl leading-tight sm:text-3xl sm:leading-tight lg:text-5xl lg:leading-tight font-normal text-zinc-900">
+      <div className="flex flex-col flex-wrap min-h-52 slide">
+        <h1 className="max-w-sm md:max-w-md lg:max-w-xl m-auto text-center sm:py-20 lg:py-24 px-8 text-2xl sm:text-3xl lg:text-4xl leading-snug md:leading-normal lg:leading-snug font-normal text-zinc-900">
           Ciao! I&apos;m Giulia, a <b>digital designer</b> based in Italy.
         </h1>
       </div> 
 
-      <div id="home-gallery" className="grid gap-10 md:grid-cols-2 md:py-12 px-6 md:px-10">
+      <div className="grid gap-10 md:grid-cols-2 px-6 md:px-10">
 
         <GalleryImage
           title="Mintel Reports Store"

@@ -2,7 +2,7 @@
 
 export default function LogoGiulia() {
   return (
-    <svg id="giulia-logo" className="lg:relative lg:right-[73%] w-full h-12 order-2" fill="#18181B" height="333" viewBox="0 0 247 333"
+    <svg id="giulia-logo" className="lg:relative lg:right-[73%] w-full h-9 md:h-12 order-2" fill="#18181B" height="333" viewBox="0 0 247 333"
     xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_1_2)">
         <path

@@ -7,7 +7,7 @@ export default function Toggle(props: any) {
     <button 
       onClick={props.onClick} 
       // className={"w-10 h-10 p-4 lg:hidden " + props.className}
-      className="w-10 h-10 p-4 lg:hidden"
+      className="w-10 h-10 md:h-12 p-4 lg:hidden"
       aria-expanded={props.isMenuOpen ? 'true' : 'false'}
     >
       <svg fill="var(--button-color)" id="hamburger" viewBox="0 0 100 100" width="50" className="relative top-[-20px] right-[20px]">
@@ -18,9 +18,9 @@ export default function Toggle(props: any) {
           }
           // id="line top" 
           width="80" 
-          height="6" 
+          height="3" 
           x="10" 
-          y={props.isMenuOpen ? '45' : '25'} 
+          y={props.isMenuOpen ? '45' : '35'} 
           rx="5"
         >
         </rect>
@@ -32,7 +32,7 @@ export default function Toggle(props: any) {
           }
           // id="line bottom" 
           width="80" 
-          height="6" 
+          height="3" 
           x="10" 
           y={props.isMenuOpen ? '45' : '65'} 
           rx="5"

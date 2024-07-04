@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 export default function MainMenu(props: any) {
-  const baseClasses = 'flex-col items-center text-center gap-4 text-6xl font-extralight leading-loose text-zinc-900 lg:flex lg:flex-row lg:gap-7 lg:text-base';
+  const baseClasses = 'flex-col items-center text-center gap-4 text-4xl lg:text-base font-extralight leading-loose text-zinc-900 lg:flex lg:flex-row lg:gap-7';
   const closeClasses = baseClasses + ' ' + 'hidden lg:visible';
 
   return (
@@ -27,7 +27,7 @@ export default function MainMenu(props: any) {
 function UnderlineLink(props: any) {
   return (
     <Link 
-      className='underline-offset-8 focus:underline focus-visible:underline active:decoration-solid'
+      className='underline-offset-8 focus:underline focus-visible:underline active:decoration-solid decoration-1'
       {...props}
     />
   )

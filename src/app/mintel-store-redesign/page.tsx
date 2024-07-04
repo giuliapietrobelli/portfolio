@@ -13,31 +13,31 @@ const images = [
     title: "Homepage",
     src: mintelHome,
     alt: "Mintel homepage",
-    className: "shadow-2xl shadow-zinc-400 row-[1/3]",
+    className: "shadow-2xl shadow-zinc-400 row-[1/3] col-1 md:row-[1/3]",
   },
   {
     title: "Listing page",
     src: mintelListing,
     alt: "Mintel listing page",
-    className: "shadow-2xl shadow-zinc-400 row-[1/3]",
+    className: "shadow-2xl shadow-zinc-400 row-[1/2] col-2 md:row-[1/3]",
   },
   {
     title: "Product page",
     src: mintelProduct,
     alt: "Mintel product page",
-    className: "shadow-2xl shadow-zinc-400 row-[1/3]",
+    className: "shadow-2xl shadow-zinc-400 row-3 col-1 md:row-[1/3]",
   },
   {
     title: "Cart page",
     src: mintelCart,
     alt: "Mintel cart page",
-    className: "shadow-2xl shadow-zinc-400 row-[1/2]",
+    className: "shadow-2xl shadow-zinc-400 row-[2/3] col-2 md:row-[1/2]",
   },
   {
     title: "Checkout page",
     src: mintelCheckout,
     alt: "Mintel checkout page",
-    className: "shadow-2xl shadow-zinc-400 col-[4] row-[2]",
+    className: "shadow-2xl shadow-zinc-400 row-3 col-2 md:col-[4] md:row-[2]",
   }
 ]
 
@@ -63,7 +63,7 @@ export default function Mintel() {
         for the communication with the developer and worked closely with the IT team.
       </ProjectIntro>
 
-      <div className="grid items-center grid-cols-2 md:grid-cols-4 gap-2 md:gap-8">
+      <div className="grid items-center grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
         <LightboxGallery images={images} className='h-5/6'/>
       </div>
     </div>

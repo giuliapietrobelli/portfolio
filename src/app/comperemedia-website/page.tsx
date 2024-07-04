@@ -74,7 +74,7 @@ export default function Comperemedia() {
           prevLink="./mintel-store-redesign"
           next="Mintel Digital Advertising"
           nextLink="./mintel-digital-advertising"
-        />
+      />
     </>
   )
 }
