@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import screens from "./tailwind.screens";
 
 const config = {
   darkMode: ["class"],
@@ -10,6 +11,7 @@ const config = {
 	],
   prefix: "",
   theme: {
+    screens,
     container: {
       center: true,
       padding: "2rem",

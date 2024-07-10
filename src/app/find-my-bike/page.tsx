@@ -47,10 +47,7 @@ export default function FindMyBike() {
         <Image className="self-center" src="/fmb_hero.jpeg" alt="Find my bike cover" width={1250} height={840} priority/>
       </div>
 
-      <div className="grid items-center gap-3 md:grid-cols-2 md:gap-8">
-        <LightboxGallery images={images} />
-      </div>
-    
+      <LightboxGallery images={images} />
     </div>
 
     <PaginationLinks

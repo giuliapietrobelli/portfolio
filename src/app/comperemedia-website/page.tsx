@@ -64,9 +64,7 @@ export default function Comperemedia() {
           <Image className="self-center" src="/comperemedia_thumb.jpg" alt="Comperemedia website preview" width={1250} height={799} priority />
         </div>
 
-        <div className="grid items-center grid-cols-6 gap-3 md:gap-8">
-          <LightboxGallery images={images} className='h-5/6' />
-        </div>
+        <LightboxGallery columns={[2, 4, 6]} images={images} className='h-5/6' />
       </div>
 
       <PaginationLinks

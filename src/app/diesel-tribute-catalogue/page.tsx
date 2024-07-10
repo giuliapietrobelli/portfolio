@@ -81,10 +81,8 @@ export default function DieselTribute() {
         <div className="self-center md:max-w-[70%]">
           <Image id="preview-pic" className="self-center" src="/diesel_hero.jpeg" alt="Diesel tribute catalogue cover" width={1250} height={840} priority/>
         </div>
-
-        <div className="grid items-center md:grid-cols-2 md:gap-13">
-          <LightboxGallery images={images} />
-        </div>
+        
+        <LightboxGallery columns={[1, 2]} images={images} />
       </div>
 
       <PaginationLinks

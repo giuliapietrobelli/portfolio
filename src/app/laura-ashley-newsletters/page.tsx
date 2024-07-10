@@ -62,9 +62,7 @@ export default function LauraAshleyNewsletters() {
           A selection of newsletters designed and sent on a daily basis.
         </ProjectIntro>
 
-        <div className="grid items-center grid-cols-2 md:grid-cols-5 gap-2 md:gap-8 md:p-[4%]">
-          <LightboxGallery images={images} className='h-5/6' />
-        </div>
+        <LightboxGallery columns={[2, 5]} images={images} className='h-5/6' />
       </div>
 
       <PaginationLinks
