@@ -46,6 +46,7 @@ export default function Home() {
           href="/laura-ashley-feature-page"
           src="/la-thumb.gif"
           alt="Laura Ashley landing page"
+          unoptimized
         />
         <GalleryImage
           title="Laura Ashley Newsletters"
@@ -58,6 +59,7 @@ export default function Home() {
           href="/find-my-bike"
           src="/fmb-thumb.gif"
           alt="Find my bike app"
+          unoptimized
         />
         <GalleryImage
           title="Diesel Tribute Catalogue"
@@ -81,7 +83,7 @@ function GalleryImage(props: any) {
         </div>
       </div>
       <Image
-        src={props.src} alt={props.alt} width={1400} height={799} priority/>
+        src={props.src} alt={props.alt} width={1400} height={799} priority unoptimized={props.unoptimized}/>
     </Link>
   )
 }
