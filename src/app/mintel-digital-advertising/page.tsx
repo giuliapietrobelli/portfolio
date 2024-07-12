@@ -8,7 +8,7 @@ export default function MintelAdv() {
     <div className="container flex flex-col gap-10 md:gap-20 py-14 px-10">
 
       <ProjectIntro title="Mintel digital advertising">
-        One of my day-to-day tasks at Mintel was to create engaging digital banners for paid advertising. Working closely with the team the aim was to create engaging visuals and copy that helped to gain leads or sales.
+      One of my daily responsibilities at Mintel was to design captivating digital banners for paid advertising. Collaborating closely with the team, we focused on creating compelling visuals and copy to generate leads and drive sales.
       </ProjectIntro>
 
       <div className="self-center">

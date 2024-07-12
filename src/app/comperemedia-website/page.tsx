@@ -15,19 +15,19 @@ const images = [
     title: "Homepage",
     src: compereHome,
     alt: "Comperemedia homepage",
-    className: "shadow-2xl shadow-zinc-400"
+    className: "shadow-2xl shadow-zinc-300"
   },
   {
     title: "About page",
     src: compereAbout,
     alt: "Comperemedia about homepage",
-    className: "shadow-2xl shadow-zinc-400"
+    className: "shadow-2xl shadow-zinc-300"
   },
   {
     title: "Solutions page",
     src: compereSolutions,
     alt: "Comperemedia solutions page",
-    className: "shadow-2xl shadow-zinc-400"
+    className: "shadow-2xl shadow-zinc-300"
   },
   {
     title: "Blog listing page",
@@ -55,16 +55,15 @@ export default function Comperemedia() {
       <div className="container flex flex-col gap-10 md:gap-20 py-20">
 
         <ProjectIntro title="Comperemedia Website">
-          During my time at Mintel, I was asked to collaborate on the design of the marketing website for Comperemedia.
-          Working closely with the designers of the marketing team, I was responsible for the finalization of the design
-          and the handoff to the developer.
+          At Mintel, I collaborated on the design of the marketing website for Comperemedia.
+          Working closely with the marketing team designers, I was responsible for finalizing the design and ensuring a smooth handoff to the developers. 
         </ProjectIntro>
 
         <div className="self-center">
           <Image className="self-center" src="/comperemedia_thumb.jpg" alt="Comperemedia website preview" width={1250} height={799} priority />
         </div>
 
-        <LightboxGallery columns={[2, 4, 6]} images={images} className='h-5/6' />
+        <LightboxGallery columns={[2, 3, 6]} images={images} className='h-5/6' />
       </div>
 
       <PaginationLinks

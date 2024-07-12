@@ -36,6 +36,12 @@ type Props = {
 }
 
 export default function LightboxGallery(props: Props) {
+  const [isServerSide, setIsServerSide] = React.useState(true)
+
+  React.useEffect(() => {
+    setIsServerSide(false)
+  }, [])
+
   const [currentIndex, setIndex] = React.useState<number | undefined>(undefined);
 
   const handleOpenChange = (open: boolean) => {
@@ -59,10 +65,14 @@ export default function LightboxGallery(props: Props) {
 
   const columnsCount = useColumnsNumber(props.columns);
 
+  if (isServerSide) {
+    return;
+  }
+
   return (
     <Dialog onOpenChange={handleOpenChange}>
       <Masonry 
-        columnGutter={16} 
+        columnGutter={24} 
         columnCount={columnsCount} 
         items={props.images} 
         render={(renderProps) => <MasonryCard {...renderProps} onClick={setIndex} />} 

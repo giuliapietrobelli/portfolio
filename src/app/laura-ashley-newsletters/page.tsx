@@ -15,31 +15,31 @@ const images = [
     title: "Christmas Gifts Guide",
     src: newsletter1,
     alt: "Christmas Gifts Guide newsletter",
-    className: "shadow-2xl shadow-zinc-400",
+    className: "shadow-2xl shadow-zinc-300",
   },
   {
     title: "Autumn Walks Collection newsletter",
     src: newsletter2,
     alt: "Autumn Walks Collection newsletter",
-    className: "shadow-2xl shadow-zinc-400",
+    className: "shadow-2xl shadow-zinc-300",
   },
   {
     title: "Hebrides Collection newsletter",
     src: newsletter3,
     alt: "Hebrides Collection newsletter",
-    className: "shadow-2xl shadow-zinc-400",
+    className: "shadow-2xl shadow-zinc-300",
   },
   {
     title: "Lighting Looks newsletter",
     src: newsletter4,
     alt: "Lighting Looks newsletter",
-    className: "shadow-2xl shadow-zinc-400",
+    className: "shadow-2xl shadow-zinc-300",
   },
   {
     title: "Wool newsletter",
     src: newsletter6,
     alt: "Wool newsletter",
-    className: "shadow-2xl shadow-zinc-400 col-[4] row-[1]",
+    className: "shadow-2xl shadow-zinc-300",
   },
 ]
 

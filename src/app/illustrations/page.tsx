@@ -100,7 +100,7 @@ export default function Illustrations() {
         A selection of illustrations made with Procreate, Illustrator, and Photoshop
       </ProjectIntro>
 
-      <LightboxGallery images={images} />
+      <LightboxGallery columns={[2, 3]} images={images} />
     </div>
 
       <PaginationLinks

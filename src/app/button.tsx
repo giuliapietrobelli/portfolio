@@ -1,13 +1,8 @@
 "use client"
 import { useState } from 'react';
-import { MyButton } from './header';
 
 function Pulsante () {
-  // const arrayContenenteRisultatiDiUseState = useState('appare')
-  const [statoDiState, funzioneCheAggiornaLoState] = useState(true)
-
-  // const statoDiState = arrayContenenteRisultatiDiUseState[0]
-  // const funzioneCheAggiornaLoState = arrayContenenteRisultatiDiUseState[1]
+  const [statoDiState, funzioneCheAggiornaLoState] = useState(true);
 
   function gestisciclick() {
     if (statoDiState) {

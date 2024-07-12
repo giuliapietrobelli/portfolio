@@ -74,8 +74,8 @@ export default function DieselTribute() {
       <div className="container flex flex-col gap-10 md:gap-20 py-20">
 
         <ProjectIntro title="Diesel tribute catalogue">
-          Design of Diesel Tribute catalog, a lookbook that presents the capsule collection designed by Nicola
-          Formichetti. Designed during my time at Diesel within the Shopping Experience team.
+          Design of the Diesel Tribute catalog, a lookbook showcasing the capsule collection by Nicola Formichetti.
+          This project was created during my time at Diesel as part of the Shopping Experience team.
         </ProjectIntro>
 
         <div className="self-center md:max-w-[70%]">

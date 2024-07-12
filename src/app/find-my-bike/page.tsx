@@ -38,9 +38,8 @@ export default function FindMyBike() {
     <div className="container flex flex-col gap-10 md:gap-20 py-20">
 
       <ProjectIntro title="Find my bike app">
-      Findmybike is a personal project that is on a plan to be developed. It&apos;s a mobile app that allows people to
-        compare multiple types of bikes, in order to easily find the right one. I created all the visual parts including
-        branding Identity, illustrations, Ux, and Ui design.
+        Findmybike is a personal project, a mobile app designed to help users compare different types of bikes, making it easier to find the perfect match.
+        I was responsible for all visual aspects of the project, including branding identity, illustrations, UX, and UI design.
       </ProjectIntro>
 
       <div className="self-center">
