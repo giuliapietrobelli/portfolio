@@ -15,7 +15,7 @@ export default function Home() {
         </h1>
       </div> 
 
-      <div className="grid gap-10 md:grid-cols-2 px-6 md:px-10">
+      <div className="max-w-[1600px] grid gap-10 md:grid-cols-2 pb-11">
 
         <GalleryImage
           title="Mintel Reports Store"

@@ -7,7 +7,7 @@ import Header from './header'
 const poppins = Poppins({subsets: ["latin"], weight: ['200','300', '400', '500', '700']})
 
 export const metadata: Metadata = {
-  title: 'Giulia Pietrobelli portfolio website',
+  title: 'Giulia Pietrobelli',
   description: 'Giulia Pietrobelli portfolio website',
 }
 

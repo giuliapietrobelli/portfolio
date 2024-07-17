@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function PaginationLinks(props: any) {
   return (
     <>
-      <div className="flex justify-end pb-20 px-6 md:px-18">
+      <div className="flex justify-end pb-20 px-6 md:px-18 2xl:px-[6rem]">
         <Link href={props.prevLink} className="flex items-center md:gap-4 mr-auto max-w-40 md:max-w-xs lg:max-w-3xl">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <path fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
