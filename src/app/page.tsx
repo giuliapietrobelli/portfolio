@@ -26,13 +26,13 @@ export default function Home() {
         <GalleryImage
           title="Comperemedia Website"
           href="/comperemedia-website"
-          src="/comperemedia_thumb.jpg"
+          src="/comperemedia-thumb.png"
           alt="Compreremedia website"
         />
         <GalleryImage
           title="Mintel Digital Advertising"
           href="/mintel-digital-advertising"
-          src="/mintel_banners_tumb.jpeg"
+          src="/mintel_banners_tumb.png"
           alt="Mintel banners"
         />
         <GalleryImage

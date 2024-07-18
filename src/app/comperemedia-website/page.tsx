@@ -60,7 +60,7 @@ export default function Comperemedia() {
         </ProjectIntro>
 
         <div className="self-center">
-          <Image className="self-center" src="/comperemedia_thumb.jpg" alt="Comperemedia website preview" width={1250} height={799} priority />
+          <Image className="self-center" src="/comperemedia-thumb.png" alt="Comperemedia website preview" width={1250} height={799} priority />
         </div>
 
         <LightboxGallery columns={[2, 3, 6]} images={images} className='h-5/6' />

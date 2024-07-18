@@ -43,7 +43,7 @@ export default function FindMyBike() {
       </ProjectIntro>
 
       <div className="self-center">
-        <Image className="self-center" src="/fmb_hero.jpeg" alt="Find my bike cover" width={1250} height={840} priority/>
+        <Image className="self-center" src="/fmb-thumb.gif" alt="Find my bike cover" width={1250} height={840} priority/>
       </div>
 
       <LightboxGallery images={images} />

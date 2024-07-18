@@ -12,7 +12,7 @@ export default function MintelAdv() {
       </ProjectIntro>
 
       <div className="self-center">
-        <Image id="preview-pic" className="self-center" src="/mintel_banners_tumb.jpeg" alt="Mintel banners" width={1021} height={799} priority/>
+        <Image id="preview-pic" className="self-center" src="/mintel_banners_tumb.png" alt="Mintel banners" width={1250} height={799} priority/>
       </div>
 
       <div className="self-center">
