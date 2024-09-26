@@ -13,6 +13,7 @@ export async function POST(req: { json: () => PromiseLike<{ name: any; email: an
             Name: name,
             Email: email,
             Message: message,
+            'Date': new Date().toISOString(), // Formato ISO 8601
           },
         },
       ],
