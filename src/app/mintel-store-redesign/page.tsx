@@ -67,7 +67,7 @@ export default function Mintel() {
           <ul className="flex flex-col md:text-left md:grid md:grid-cols-2 gap-8">
             <li><b>Research and Analysis:</b> Based my design strategy on an in-depth user analysis conducted by an external company.
               This analysis tracked and examined user journeys to identify design weaknesses and areas for improvement.</li>
-            <li><b>Website Redesign:</b> Improved the overall look and feel of the existing WordPress website, giving it a modern and visually appealing update while accounting for the platform&apos;s technical limitations in terms of functionality and design..</li>
+            <li><b>Website Redesign:</b> Improved the overall look and feel of the existing WordPress website, giving it a modern and visually appealing update while accounting for the platform&apos;s technical limitations in terms of functionality and design.</li>
             <li><b>User Experience Enhancement:</b> Enhanced the UX of key pages to provide a smoother and more intuitive experience, making it easier for customers to find and purchase the reports they need.</li>
             <li><b>Collaboration:</b> Communicated effectively with developers and worked closely with the IT team to ensure seamless implementation of design changes.</li>
           </ul>
